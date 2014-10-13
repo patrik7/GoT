@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
+{% load i18n %}
+{% load bootstrap %}
+
 {% block main %}
 
 <div class="row">
@@ -8,7 +11,26 @@
   </div>
  
   <div class="col-sm-9">
-    resr
+    <h2>{% if lord.is_king %}King{% else %}Lord{% endif %} {{lord.user}} of {{lord.family}}</h3>
+
+    <b>{% trans 'Gold' %}:</b> {{lord.gold}} <i class="text-muted">({{lord.gold_flow}})</i><br/>
+    <b>{% trans 'Army' %}:</b> {{lord.army}} <i class="text-muted">({{lord.recruitment}})</i><br/>
+    <b>{% trans 'Population' %}:</b> {{lord.population}} <br/>
+
+    <hr/>
+
+    <form action="{% url "account" %}" method="POST" >
+      {% csrf_token %}
+
+      {{form_tax_recruitment|bootstrap}}
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <input type="submit" class="btn btn-primary" value="{% trans 'Change' %}" />
+        </div>
+      </div>
+    </form>
+
   </div>
 </div>
 

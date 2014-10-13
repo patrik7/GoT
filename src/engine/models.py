@@ -88,8 +88,7 @@ class Game(models.Model):
         
     def compute_income(self):
         for p in self.players():
-            if p.not_king:
-                p.gold += p.population*0.0001*p.tax
+            p.gold += p.compute_tax_income()
 
     def compute_spying(self):
         for p in self.players():

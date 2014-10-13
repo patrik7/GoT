@@ -1,0 +1,10 @@
+{% load i18n %}
+
+{% for item in navigation %}
+
+  <li class="{{item.cls}}">
+    <a href="{{item.url}}" >
+      <span class="glyphicon glyphicon-{{item.icon}}"></span> {{item.label}}
+    </a>
+  </li>
+{% endfor %}

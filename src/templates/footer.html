@@ -1,0 +1,32 @@
+{% load i18n %}
+<div id="footer">
+  <div class="container">
+    <div class="footer" style="margin-top: 10px;">
+      <div class="row">
+        <div class="col-xs-6">
+          <ul class="nav navbar-nav navbar-left nav-pills">
+            <li class="">
+              <a href="/account/">
+                <span class="glyphicon glyphicon-account"></span> {% trans 'Account' %}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <div class="right text-right">
+            {% block footer %}
+            {% endblock %}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row text-right small" style="text-transform:uppercase; margin-top: 5px;">
+        <div class="col-xs-12">
+          <a href="http://glyphicons.com" class="small" target="_blank">Glyphicons</a> |
+          <a href="mailto:webmaster@{{domain}}" class="small">webmaster@{{domain}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
