@@ -1,0 +1,101 @@
+/******************************************************************************/
+
+html {
+  background-color: #e3f3ff;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#data:before, #data:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+#wrap, #push {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -200px;
+}
+
+#content{
+    background-image:url("../images/bg.png");
+    background-repeat:repeat-x;
+    padding-bottom:50px;
+    background-position:center;
+    background-position: top;
+    padding-top:80px;
+}
+
+/******************************************************************************
+3. Header
+*******************************************************************************/
+
+#header{
+    background-color:#00aedf;
+    color:white;
+    height:62px;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;}
+    #header h2{ color:white; }
+    #header ul{ padding-top: 6px; }
+    #header button{
+        border: 1px solid #FFF;
+        margin-top: 20px; }
+    #header a{ color:white; display:block; }
+    #header a:hover{ background-color:#428bca; }
+    #header ul li a[href*="/b/login"]{ 
+        background-image: -webkit-gradient(linear,left 0,left 100%,from(#428bca),to(#2d6ca2));
+        background-image: -webkit-linear-gradient(top,#428bca 0,#2d6ca2 100%);
+        background-image: -moz-linear-gradient(top,#428bca 0,#2d6ca2 100%);
+        background-image: linear-gradient(to bottom,#428bca 0,#2d6ca2 100%);
+        background-repeat: repeat-x;
+        border-color: #2b669a;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca',endColorstr='#ff2d6ca2',GradientType=0);
+        height: 50px;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        }
+
+.navbar-brand{ padding:0px important; }
+    @media only screen and (max-width: 768px) {
+        .hero{ 
+            float: left;
+            background: #428bca;
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+	}
+        .nav-pills>li{float:none !important;}
+    }
+
+
+/******************************************************************************
+6. Footer
+*******************************************************************************/
+
+#footer{
+    background-color:#e3f3ff;
+    min-height:200px;
+    }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
